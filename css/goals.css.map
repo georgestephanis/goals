@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEC,iBAAW;EACV,KAAK,EAAE,OAAO",
+"sources": ["../scss/goals.scss"],
+"names": [],
+"file": "goals.css"
+}

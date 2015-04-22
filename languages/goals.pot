@@ -1,0 +1,53 @@
+# Copyright (C) 2015 George Stephanis
+# This file is distributed under the GPLv2+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Goals 0.1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/goals\n"
+"POT-Creation-Date: 2015-04-22 02:25:37+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+
+#: goals.php:29
+msgid ""
+"<strong>%1$s</strong> requires <tt>PHP 5.3.0</tt> or higher to run, your "
+"server is currently running <tt>%2$s</tt>."
+msgstr ""
+
+#: includes/class.goal.php:13
+msgid "This is not a post, let alone a goal."
+msgstr ""
+
+#: includes/class.goal.php:17
+msgid "This is not a goal."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Goals"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://github.com/georgestephanis/goals"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A custom post type to store and display your goals."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "George Stephanis"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://stephanis.info"
+msgstr ""
+
+#: goals.php:29
+msgctxt "Plugin Name"
+msgid "Goals"
+msgstr ""
