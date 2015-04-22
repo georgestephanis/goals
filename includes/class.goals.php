@@ -65,6 +65,7 @@ class Goals {
 			'exclude_from_search' => true,
 			'publicly_queryable'  => true,
 			'capability_type'     => 'page',
+			'register_meta_box_cb' => array( __CLASS__, 'register_meta_boxes' ),
 		);
 		register_post_type( self::POST_TYPE, $args );
 	}
@@ -81,4 +82,7 @@ class Goals {
 		// TODO: Create widgets for displaying single goals, goals by user, goals by team, or all goals?
 	}
 
+	public static function register_meta_boxes() {
+		add_meta_box( 'goal_details', __( 'Details', 'goals' ), array( 'GeorgeStephanis\Goals\Goal', 'goal_details_meta_box' ), null, 'normal', 'high' );
+	}
 }

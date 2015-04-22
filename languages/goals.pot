@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goals 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/goals\n"
-"POT-Creation-Date: 2015-04-22 02:59:18+00:00\n"
+"POT-Creation-Date: 2015-04-22 03:25:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,6 +25,10 @@ msgstr ""
 
 #: includes/class.goal.php:17
 msgid "This is not a goal."
+msgstr ""
+
+#: includes/class.goal.php:33
+msgid "Goal Status:"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
@@ -83,6 +87,10 @@ msgstr ""
 msgid "A Goal"
 msgstr ""
 
+#: includes/class.goals.php:86
+msgid "Details"
+msgstr ""
+
 #. Plugin URI of the plugin/theme
 msgid "http://github.com/georgestephanis/goals"
 msgstr ""
@@ -102,6 +110,21 @@ msgstr ""
 #: goals.php:29
 msgctxt "Plugin Name"
 msgid "Goals"
+msgstr ""
+
+#: includes/class.goal.php:37
+msgctxt "Goal Status"
+msgid "Not Done"
+msgstr ""
+
+#: includes/class.goal.php:41
+msgctxt "Goal Status"
+msgid "Halfway There…"
+msgstr ""
+
+#: includes/class.goal.php:45
+msgctxt "Goal Status"
+msgid "Done!"
 msgstr ""
 
 #: includes/class.goals.php:34
