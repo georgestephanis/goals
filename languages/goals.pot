@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goals 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/goals\n"
-"POT-Creation-Date: 2015-04-22 02:25:37+00:00\n"
+"POT-Creation-Date: 2015-04-22 02:59:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,6 +31,58 @@ msgstr ""
 msgid "Goals"
 msgstr ""
 
+#: includes/class.goals.php:38
+msgid "Parent Goal:"
+msgstr ""
+
+#: includes/class.goals.php:39
+msgid "All Goals"
+msgstr ""
+
+#: includes/class.goals.php:40
+msgid "Add New Goal"
+msgstr ""
+
+#: includes/class.goals.php:41
+msgid "Add New"
+msgstr ""
+
+#: includes/class.goals.php:42
+msgid "New Goal"
+msgstr ""
+
+#: includes/class.goals.php:43
+msgid "Edit Goal"
+msgstr ""
+
+#: includes/class.goals.php:44
+msgid "Update Goal"
+msgstr ""
+
+#: includes/class.goals.php:45
+msgid "View Goal"
+msgstr ""
+
+#: includes/class.goals.php:46
+msgid "Search Goals"
+msgstr ""
+
+#: includes/class.goals.php:47
+msgid "Not found"
+msgstr ""
+
+#: includes/class.goals.php:48
+msgid "Not found in Trash"
+msgstr ""
+
+#: includes/class.goals.php:51
+msgid "goal"
+msgstr ""
+
+#: includes/class.goals.php:52
+msgid "A Goal"
+msgstr ""
+
 #. Plugin URI of the plugin/theme
 msgid "http://github.com/georgestephanis/goals"
 msgstr ""
@@ -50,4 +102,14 @@ msgstr ""
 #: goals.php:29
 msgctxt "Plugin Name"
 msgid "Goals"
+msgstr ""
+
+#: includes/class.goals.php:34
+msgctxt "Post Type General Name"
+msgid "Goals"
+msgstr ""
+
+#: includes/class.goals.php:35
+msgctxt "Post Type Singular Name"
+msgid "Goal"
 msgstr ""
