@@ -38,7 +38,9 @@ if ( version_compare( PHP_VERSION, '5.3.0', '<' ) ) {
 	return;
 }
 
+use GeorgeStephanis\Goals\Goals;
+
 include( 'includes/class.goals.php' );
 include( 'includes/class.goal.php' );
 
-GeorgeStephanis\Goals\Goals::get_instance();
+Goals::get_instance();
