@@ -75,6 +75,10 @@ class Goal {
 	}
 
 	public static function save_post( $post_id, $post ) {
+		if ( empty( $_POST['_save_goal_nonce'] ) ) {
+			return $post_id;
+		}
+
 		if ( ! wp_verify_nonce( $_POST['_save_goal_nonce'], '_save_goal_nonce' ) ) {
 			return $post_id;
 		}
