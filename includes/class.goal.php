@@ -46,6 +46,30 @@ class Goal {
 					</label>
 				</td>
 			</tr>
+
+			<?php $_goal_content = get_post_meta( $post->ID, '_goal_content', true ); ?>
+			<tr valign="top">
+				<th scope="row"><label for="_goal_content"><?php esc_html_e( 'Goal Content:', 'goals' ); ?></label></th>
+				<td>
+					<textarea name="_goal_content" class="widefat"><?php echo esc_textarea( $_goal_content ); ?></textarea>
+				</td>
+			</tr>
+
+			<?php $_goal_caption = get_post_meta( $post->ID, '_goal_caption', true ); ?>
+			<tr valign="top">
+				<th scope="row"><label for="_goal_caption"><?php esc_html_e( 'Goal Caption:', 'goals' ); ?></label></th>
+				<td>
+					<textarea name="_goal_caption" class="widefat"><?php echo esc_textarea( $_goal_caption ); ?></textarea>
+				</td>
+			</tr>
+
+			<?php $_goal_notes = get_post_meta( $post->ID, '_goal_notes', true ); ?>
+			<tr valign="top">
+				<th scope="row"><label for="_goal_notes"><?php esc_html_e( 'Goal Notes:', 'goals' ); ?></label></th>
+				<td>
+					<textarea name="_goal_notes" class="widefat"><?php echo esc_textarea( $_goal_notes ); ?></textarea>
+				</td>
+			</tr>
 		</table>
 		<?php
 	}
@@ -68,6 +92,18 @@ class Goal {
 				$_POST['_goal_status'] = '';
 			}
 			update_post_meta( $post_id, '_goal_status', $_POST['_goal_status'] );
+		}
+
+		if ( isset( $_POST['_goal_content'] ) ) {
+			update_post_meta( $post_id, '_goal_content', sanitize_text_field( $_POST['_goal_content'] ) );
+		}
+
+		if ( isset( $_POST['_goal_caption'] ) ) {
+			update_post_meta( $post_id, '_goal_caption', sanitize_text_field( $_POST['_goal_caption'] ) );
+		}
+
+		if ( isset( $_POST['_goal_notes'] ) ) {
+			update_post_meta( $post_id, '_goal_notes', sanitize_text_field( $_POST['_goal_notes'] ) );
 		}
 
 		return $post_id;
