@@ -150,7 +150,7 @@ class Goal {
 					<?php the_post_thumbnail(); ?>
 				<?php endif; ?>
 
-				<div id="goal-content"><?php echo get_post_meta( $id, '_goal_content', true ); ?></div>
+				<div class="goal-content"><?php echo get_post_meta( $id, '_goal_content', true ); ?></div>
 
 				<?php if ( $caption = get_post_meta( $id, '_goal_caption', true ) ) : ?>
 					<figcaption><?php echo $caption; ?></figcaption>
