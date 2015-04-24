@@ -131,7 +131,7 @@ class Goal {
 		);
 		$args = wp_parse_args( $args, $defaults );
 		$goal = $this->post;
-		$id   = $goal->post_ID;
+		$id   = $goal->ID;
 		?>
 		<div class="goal goal-display" data-id="<?php echo esc_attr( $id ); ?>"
 					data-status="<?php echo esc_attr( get_post_meta( $id, '_goal_status', true ) ); ?>">
