@@ -23,11 +23,17 @@ class Goals {
 	 * Make __construct() a private so it must be instantiated through `self::get_instance()`;
 	 */
 	private function __construct() {
+		add_action( 'init',         array( __CLASS__, 'register_scripts_styles' ) );
 		add_action( 'init',         array( __CLASS__, 'register_post_types' ) );
 		add_action( 'init',         array( __CLASS__, 'register_taxonomies' ) );
 		add_action( 'init',         array( __CLASS__, 'register_shortcodes' ) );
 		add_action( 'widgets_init', array( __CLASS__, 'register_widgets' ) );
 		add_action( 'save_post',    array( '\GeorgeStephanis\Goals\Goal', 'save_post' ), 10, 2 );
+	}
+
+	public static function register_scripts_styles() {
+		$min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+		wp_register_style( 'goals', plugins_url( "css/goals{$min}.css", __GOALS_PLUGIN_FILE__ ) );
 	}
 
 	public static function register_post_types() {

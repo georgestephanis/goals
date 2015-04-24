@@ -128,6 +128,8 @@ class Goal {
 	}
 
 	public function render( $args = array() ) {
+		wp_enqueue_style( 'goals' );
+
 		$defaults = array(
 			'show_title'     => true,
 			'show_thumbnail' => true,

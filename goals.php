@@ -38,6 +38,8 @@ if ( version_compare( PHP_VERSION, '5.3.0', '<' ) ) {
 	return;
 }
 
+define( '__GOALS_PLUGIN_FILE__', __FILE__ );
+
 use GeorgeStephanis\Goals\Goals;
 
 include( 'includes/class.goals.php' );
