@@ -1,8 +1,28 @@
 /*!
  * Do not modify this file directly.  It is compiled Sass code.
  */
-.thing .thing-two {
-  color: inherit;
+.goal-display {
+  background: #eee;
+  border: 0.25em solid #888;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em;
+  max-width: 80%;
+}
+.goal-display * {
+  box-sizing: border-box;
+}
+.goal-display[data-status="half"] {
+  border-color: #00c;
+}
+.goal-display[data-status="done"] {
+  border-color: #0c0;
+}
+.goal-display h3 {
+  margin: 0;
+}
+.goal-display figure {
+  margin: 0;
 }
 
 /*# sourceMappingURL=goals.css.map */
