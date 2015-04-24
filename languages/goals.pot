@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goals 0.1.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/goals\n"
-"POT-Creation-Date: 2015-04-22 03:25:17+00:00\n"
+"POT-Creation-Date: 2015-04-24 17:41:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,63 +31,75 @@ msgstr ""
 msgid "Goal Status:"
 msgstr ""
 
+#: includes/class.goal.php:52
+msgid "Goal Content:"
+msgstr ""
+
+#: includes/class.goal.php:60
+msgid "Goal Caption:"
+msgstr ""
+
+#: includes/class.goal.php:68
+msgid "Goal Notes:"
+msgstr ""
+
 #. Plugin Name of the plugin/theme
 msgid "Goals"
 msgstr ""
 
-#: includes/class.goals.php:38
+#: includes/class.goals.php:39
 msgid "Parent Goal:"
 msgstr ""
 
-#: includes/class.goals.php:39
+#: includes/class.goals.php:40
 msgid "All Goals"
 msgstr ""
 
-#: includes/class.goals.php:40
+#: includes/class.goals.php:41
 msgid "Add New Goal"
 msgstr ""
 
-#: includes/class.goals.php:41
+#: includes/class.goals.php:42
 msgid "Add New"
 msgstr ""
 
-#: includes/class.goals.php:42
+#: includes/class.goals.php:43
 msgid "New Goal"
 msgstr ""
 
-#: includes/class.goals.php:43
+#: includes/class.goals.php:44
 msgid "Edit Goal"
 msgstr ""
 
-#: includes/class.goals.php:44
+#: includes/class.goals.php:45
 msgid "Update Goal"
 msgstr ""
 
-#: includes/class.goals.php:45
+#: includes/class.goals.php:46
 msgid "View Goal"
 msgstr ""
 
-#: includes/class.goals.php:46
+#: includes/class.goals.php:47
 msgid "Search Goals"
 msgstr ""
 
-#: includes/class.goals.php:47
+#: includes/class.goals.php:48
 msgid "Not found"
 msgstr ""
 
-#: includes/class.goals.php:48
+#: includes/class.goals.php:49
 msgid "Not found in Trash"
 msgstr ""
 
-#: includes/class.goals.php:51
+#: includes/class.goals.php:52
 msgid "goal"
 msgstr ""
 
-#: includes/class.goals.php:52
+#: includes/class.goals.php:53
 msgid "A Goal"
 msgstr ""
 
-#: includes/class.goals.php:86
+#: includes/class.goals.php:87
 msgid "Details"
 msgstr ""
 
@@ -127,12 +139,12 @@ msgctxt "Goal Status"
 msgid "Done!"
 msgstr ""
 
-#: includes/class.goals.php:34
+#: includes/class.goals.php:35
 msgctxt "Post Type General Name"
 msgid "Goals"
 msgstr ""
 
-#: includes/class.goals.php:35
+#: includes/class.goals.php:36
 msgctxt "Post Type Singular Name"
 msgid "Goal"
 msgstr ""
