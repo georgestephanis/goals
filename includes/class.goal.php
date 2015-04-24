@@ -132,14 +132,12 @@ class Goal {
 		$args = wp_parse_args( $args, $defaults );
 		$goal = $this->post;
 		$id   = $goal->post_ID;
-
-		setup_postdata( $goal );
 		?>
-		<div class="goal goal-display" data-id="<?php the_ID(); ?>"
+		<div class="goal goal-display" data-id="<?php echo esc_attr( $id ); ?>"
 					data-status="<?php echo esc_attr( get_post_meta( $id, '_goal_status', true ) ); ?>">
 
-					<?php if ( $args['show_title'] && get_the_title() ) : ?>
-				<h3><?php the_title(); ?></h3>
+			<?php if ( $args['show_title'] && $goal->post_title ) : ?>
+				<h3><?php echo esc_html( wptexturize( $goal->post_title ) ); ?></h3>
 			<?php endif; ?>
 
 			<figure>
@@ -162,6 +160,5 @@ class Goal {
 
 		</div>
 		<?php
-		wp_reset_postdata();
 	}
 }
