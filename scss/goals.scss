@@ -1,6 +1,39 @@
 
-.thing {
-	.thing-two {
-		color: inherit;
+.goal-display {
+	background: #eee;
+	border: 0.25em solid #888;
+	box-sizing: border-box;
+	margin: 1em;
+	padding: 1em;
+	max-width: 80%;
+
+	* {
+		box-sizing: border-box;
+	}
+
+	&[data-status="half"] {
+		border-color: #00c;
+	}
+	&[data-status="done"] {
+		border-color: #0c0;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	figure {
+		margin: 0;
+
+		.goal-content {
+
+		}
+		figcaption {
+
+		}
+	}
+
+	.notes {
+
 	}
 }
