@@ -73,4 +73,45 @@ class Goal {
 		return $post_id;
 	}
 
+	public function render( $args = array() ) {
+		$defaults = array(
+			'show_title'     => true,
+			'show_thumbnail' => true,
+			'comments_link'  => false,
+		);
+		$args = wp_parse_args( $args, $defaults );
+		$goal = $this->post;
+		$id   = $goal->post_ID;
+
+		setup_postdata( $goal );
+		?>
+		<div class="goal goal-display" data-id="<?php the_ID(); ?>"
+					data-status="<?php echo esc_attr( get_post_meta( $id, '_goal_status', true ) ); ?>">
+
+					<?php if ( $args['show_title'] && get_the_title() ) : ?>
+				<h3><?php the_title(); ?></h3>
+			<?php endif; ?>
+
+			<figure>
+
+					<?php if ( $args['show_thumbnail'] ) : ?>
+					<?php the_post_thumbnail(); ?>
+				<?php endif; ?>
+
+				<div id="goal-content"><?php echo get_post_meta( $id, '_goal_content', true ); ?></div>
+
+				<?php if ( $caption = get_post_meta( $id, '_goal_caption', true ) ) : ?>
+					<figcaption><?php echo $caption; ?></figcaption>
+				<?php endif; ?>
+
+			</figure>
+
+			<?php if ( $notes = get_post_meta( $id, '_goal_notes', true ) ) : ?>
+				<footer class="notes"><?php echo $notes; ?></footer>
+			<?php endif; ?>
+
+		</div>
+		<?php
+		wp_reset_postdata();
+	}
 }
