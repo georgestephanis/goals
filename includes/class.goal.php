@@ -25,10 +25,10 @@ class Goal {
 	public static function goal_details_meta_box( $post ) {
 		$post = get_post( $post );
 
-		wp_nonce_field( '_redirect_url_nonce', '_redirect_url_nonce', false );
-		$_goal_status = get_post_meta( $post->ID, '_goal_status', true );
+		wp_nonce_field( '_save_goal_nonce', '_save_goal_nonce', false );
 		?>
 		<table class="form-table">
+			<?php $_goal_status = (string) get_post_meta( $post->ID, '_goal_status', true ); ?>
 			<tr valign="top">
 				<th scope="row"><?php esc_html_e( 'Goal Status:', 'goals' ); ?></th>
 				<td>
@@ -48,6 +48,29 @@ class Goal {
 			</tr>
 		</table>
 		<?php
+	}
+
+	public static function save_post( $post_id, $post ) {
+		if ( ! wp_verify_nonce( $_POST['_save_goal_nonce'], '_save_goal_nonce' ) ) {
+			return $post_id;
+		}
+
+		if ( ! current_user_can( 'edit_post', $post_id ) ) {
+			return $post_id;
+		}
+
+		if ( Goals::POST_TYPE !== $post->post_type ) {
+			return $post_id;
+		}
+
+		if ( isset( $_POST['_goal_status'] ) ) {
+			if ( ! in_array( $_POST['_goal_status'], array( 'half', 'done' ) ) ) {
+				$_POST['_goal_status'] = '';
+			}
+			update_post_meta( $post_id, '_goal_status', $_POST['_goal_status'] );
+		}
+
+		return $post_id;
 	}
 
 }

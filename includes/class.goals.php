@@ -27,6 +27,7 @@ class Goals {
 		add_action( 'init',         array( __CLASS__, 'register_taxonomies' ) );
 		add_action( 'init',         array( __CLASS__, 'register_shortcodes' ) );
 		add_action( 'widgets_init', array( __CLASS__, 'register_widgets' ) );
+		add_action( 'save_post',    array( '\GeorgeStephanis\Goals\Goal', 'save_post' ), 10, 2 );
 	}
 
 	public static function register_post_types() {
