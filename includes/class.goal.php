@@ -73,6 +73,20 @@ class Goal {
 		return $post_id;
 	}
 
+	public static function shortcode( $atts ) {
+		$defaults = array(
+			'id' => 0,
+		);
+		$atts = shortcode_atts( $defaults, $atts, 'goal' );
+
+		$goal = new Goal( $atts['id'] );
+		if ( $goal && ! is_wp_error( $goal ) ) {
+			ob_start();
+			$goal->render( $atts );
+			return ob_get_clean();
+		}
+	}
+
 	public function render( $args = array() ) {
 		$defaults = array(
 			'show_title'     => true,
@@ -94,7 +108,7 @@ class Goal {
 
 			<figure>
 
-					<?php if ( $args['show_thumbnail'] ) : ?>
+				<?php if ( $args['show_thumbnail'] ) : ?>
 					<?php the_post_thumbnail(); ?>
 				<?php endif; ?>
 

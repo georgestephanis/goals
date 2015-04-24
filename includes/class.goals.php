@@ -76,7 +76,7 @@ class Goals {
 	}
 
 	public static function register_shortcodes() {
-		// TODO: Create shortcode for displaying single goals, goals by user, goals by team, or all goals?
+		add_shortcode( 'goal', array( '\GeorgeStephanis\Goals\Goal', 'shortcode' ) );
 	}
 
 	public static function register_widgets() {
