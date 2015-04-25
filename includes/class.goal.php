@@ -30,7 +30,7 @@ class Goal {
 		<table class="form-table">
 			<?php $_goal_status = (string) get_post_meta( $post->ID, '_goal_status', true ); ?>
 			<tr valign="top">
-				<th scope="row"><?php esc_html_e( 'Goal Status:', 'goals' ); ?></th>
+				<th scope="row" style="width: 25%;"><?php esc_html_e( 'Goal Status:', 'goals' ); ?></th>
 				<td>
 					<label>
 						<input type="radio" name="_goal_status" value="" <?php checked( $_goal_status, '' ); ?> />
