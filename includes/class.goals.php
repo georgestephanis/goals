@@ -58,7 +58,7 @@ class Goals {
 			'label'               => __( 'goal', 'goals' ),
 			'description'         => __( 'A Goal', 'goals' ),
 			'labels'              => $labels,
-			'supports'            => array( 'title', 'author', 'thumbnail', 'comments', 'revisions', ),
+			'supports'            => array( 'title', 'author', 'comments', 'revisions', ),
 			'hierarchical'        => false,
 			'public'              => true,
 			'show_ui'             => true,
