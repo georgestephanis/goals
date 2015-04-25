@@ -92,4 +92,12 @@ class Goals {
 	public static function register_meta_boxes() {
 		add_meta_box( 'goal_details', __( 'Details', 'goals' ), array( '\GeorgeStephanis\Goals\Goal', 'goal_details_meta_box' ), null, 'normal', 'high' );
 	}
+
+	public static function get_all_dashicons() {
+		$dashicons_css = file_get_contents( ABSPATH . 'wp-includes/css/dashicons.css' );
+		preg_match_all( '/\.(?<class>dashicons-[a-z\d-]+):before {/', $dashicons_css, $dashicons );
+		$classes = $dashicons['class'];
+		array_shift( $classes ); // Remove .dashicons-before
+		return array_unique( $classes );
+	}
 }

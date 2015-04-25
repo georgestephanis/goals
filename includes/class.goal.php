@@ -47,6 +47,19 @@ class Goal {
 				</td>
 			</tr>
 
+			<?php $_goal_dashicon = get_post_meta( $post->ID, '_goal_dashicon', true ); ?>
+			<tr valign="top">
+				<th scope="row"><?php esc_html_e( 'Icon:', 'goals' ); ?></label></th>
+				<td>
+				<?php foreach ( Goals::get_all_dashicons() as $dashicon ) : ?>
+					<label style="white-space: nowrap;">
+						<input type="radio" name="_goal_dashicon" value="<?php echo esc_attr( $dashicon ); ?>" <?php checked( $_goal_dashicon, $dashicon ); ?> />
+						<span class="dashicons <?php echo esc_attr( $dashicon ); ?>"></span>
+					</label>
+				<?php endforeach; ?>
+				</td>
+			</tr>
+
 			<?php $_goal_content = get_post_meta( $post->ID, '_goal_content', true ); ?>
 			<tr valign="top">
 				<th scope="row"><label for="_goal_content"><?php esc_html_e( 'Goal Content:', 'goals' ); ?></label></th>
@@ -98,6 +111,10 @@ class Goal {
 			update_post_meta( $post_id, '_goal_status', $_POST['_goal_status'] );
 		}
 
+		if ( isset( $_POST['_goal_dashicon'] ) ) {
+			update_post_meta( $post_id, '_goal_dashicon', preg_replace( '/[^a-z\d-]+/i', '', $_POST['_goal_dashicon'] ) );
+		}
+
 		if ( isset( $_POST['_goal_content'] ) ) {
 			update_post_meta( $post_id, '_goal_content', sanitize_text_field( $_POST['_goal_content'] ) );
 		}
@@ -129,6 +146,7 @@ class Goal {
 
 	public function render( $args = array() ) {
 		wp_enqueue_style( 'goals' );
+		wp_enqueue_style( 'dashicons' );
 
 		$defaults = array(
 			'show_title'     => true,
@@ -148,8 +166,8 @@ class Goal {
 
 			<figure>
 
-				<?php if ( $args['show_thumbnail'] ) : ?>
-					<?php the_post_thumbnail(); ?>
+				<?php if ( $_goal_dashicon = get_post_meta( $id, '_goal_dashicon', true ) ) : ?>
+					<span class="dashicons <?php echo esc_attr( $_goal_dashicon ); ?>"></span>
 				<?php endif; ?>
 
 				<div class="goal-content"><?php echo get_post_meta( $id, '_goal_content', true ); ?></div>
